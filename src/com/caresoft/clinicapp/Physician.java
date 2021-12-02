@@ -30,9 +30,14 @@ public class Physician extends User implements HIPAACompliantUser {
 		return true;
 	}
 
+	//	---- Access Authorized Method -----------------------------
+	//	@logic: Checks the physician's id against the given id
+	//	@return: boolean true if they are a match, otherwise false
 	@Override
 	public boolean accessAuthorized(Integer confirmedAuthID) {
-		// TODO Auto-generated method stub
+		if (this.id.equals(confirmedAuthID)) {
+			return true;
+		}
 		return false;
 	}
 
