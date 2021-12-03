@@ -20,7 +20,8 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 
 	//	//// ACTIONS /////////////////////////////////////////////////////
 	
-	// Implement HIPAACompliantUser!
+	//  **** Implement HIPAACompliantUser*********************************
+	
 	//	----- Assign Pin Method ------------------------------------------
 	//	@logic: Pin must be 6 digits or more
 	//	@return: True if Pin is 6 digits or more, False if pin is less than 6 digits
@@ -48,11 +49,13 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	}
 	
 	
-	// TO DO: Implement HIPAACompliantAdmin!
+	// 	**** Implement HIPAACompliantAdmin! *******************************
+	
+	//	---- Report Security Incidents Method -----------------------------
+	//	@return: list of Strings (incidents reported)
 	@Override
 	public ArrayList<String> reportSecurityIncidents() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.securityIncidents;
 	}
 	
 	

@@ -25,6 +25,4 @@ public class User {
 	public void setPin(int pin) {
 		this.pin = pin;
 	}
-		
-
 }
