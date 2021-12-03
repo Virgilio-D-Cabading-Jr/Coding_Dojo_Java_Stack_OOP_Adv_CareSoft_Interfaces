@@ -15,6 +15,7 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	public AdminUser(Integer id, String role) {
 		super(id);
 		this.role = role;
+		this.securityIncidents = new ArrayList<String>();
 	}
 	
 
@@ -66,9 +67,9 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	}
 
 	public void authIncident() {
-		String report = String.format("Datetime Submitted: %s \n,  ID: %s\n Notes: %s \n", new Date(), this.id,
+		String report = String.format("Datetime Submitted: %s \n,  ID: %d\n Notes: %s \n", new Date(), this.id,
 				"AUTHORIZATION ATTEMPT FAILED FOR THIS USER");
-		securityIncidents.add(report);
+		this.securityIncidents.add(report);
 	}
 	
 	//	//// GETTERS AND SETTERS /////////////////////////////////////////
