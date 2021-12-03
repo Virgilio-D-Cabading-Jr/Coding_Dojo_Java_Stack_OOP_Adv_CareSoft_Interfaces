@@ -24,7 +24,7 @@ public class Physician extends User implements HIPAACompliantUser {
 	@Override
 	public boolean assignPin(int pin) {
 		if ((pin < 1000) || (pin > 9999)) {
-			return false										// Pin must be exactly 4 digits, returns false if not.
+			return false;										// Pin must be exactly 4 digits, returns false if not.
 		}
 		this.pin = pin;
 		return true;
