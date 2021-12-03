@@ -1,6 +1,7 @@
 package com.caresoft.clinicapp;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class AdminUser extends User implements HIPAACompliantUser, HIPAACompliantAdmin {
 
@@ -92,8 +93,4 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	public void setSecurityIncidents(ArrayList<String> securityIncidents) {
 		this.securityIncidents = securityIncidents;
 	}
-
-
-
-
 }
